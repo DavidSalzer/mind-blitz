@@ -250,10 +250,12 @@ input[type="range"]::-webkit-slider-thumb {
 
 #share-btn {
     background-image: url('../img/facebook_share.png');
+    cursor: pointer;
 }
 
 #back-to-edit-btn {
     background-image: url('../img/edit_pencil.png');
+    cursor: pointer;
 }
 
 .results-btn {

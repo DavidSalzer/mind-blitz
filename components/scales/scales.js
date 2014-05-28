@@ -1,14 +1,7 @@
-mindBlitzApp.controller('scales', ['$scope','$state', function ($scope,$state) {
+mindBlitzApp.controller('scales', ['$scope','$state', 'resultsData',function ($scope,$state,resultsData) {
 
-    $scope.data = {
-        "visualTextual": "5",
-        "independentSocial": "5",
-        "bouncyLinear": "5",
-        "activePassive": "5",
-        "autodidacticFramed": "5",
-        "gamesSerious": "5",
-        "subjectInterdisciplinary": "5"
-    }
+    $scope.data = resultsData.getResults();
+    
 
     $scope.send = function () {
         console.log($scope.data);
