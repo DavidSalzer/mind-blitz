@@ -1,6 +1,9 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
 body {
     color: #373834;
     direction: rtl;
+    font-family: 'Open Sans Hebrew';
 }
 
 /*disable highlight*/
@@ -19,50 +22,53 @@ select {
 
 /*change place holder color*/
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #373834;
+    color: #373834;
 }
+
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #373834;
-    opacity:  1;
+    color: #373834;
+    opacity: 1;
 }
+
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #373834;
-    opacity:  1;
+    color: #373834;
+    opacity: 1;
 }
+
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #373834;
+    color: #373834;
 }
 
 /*---------Header---------*/
 
 .container {
     max-width: 650px;
-width: 100%;
-margin: auto;
-background-image: url('../img/background_small.jpg');
-padding-top: 16px;
+    width: 100%;
+    margin: auto;
+    background-image: url('../img/background_small.jpg');
+    padding-top: 16px;
 }
 
 .main-header {
     background: #2a2f34;
     width: 100%;
     max-width: 650px;
-   height: 130px;
+    height: 140px;
     text-align: center;
-    font-family: 'Myriad Pro';
     padding-right: 23px;
     padding-left: 23px;
-    padding-top: 13px;    
+    padding-top: 13px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box; /* Opera/IE 8+ */
     margin: auto;
+    position: relative;
 }
 
 .image-container {
     height: 60px;
-width: 60px;
-background-size: contain;
+    width: 60px;
+    background-size: contain;
     background-image: url('../img/logo_small.png');
     background-repeat: no-repeat;
     margin: auto;
@@ -88,7 +94,7 @@ select, input, button {
     height: 35px;
     margin-bottom: 15px;
     direction: rtl;
-   text-indent: 20px;
+    text-indent: 20px;
     border-radius: 50px;
     border: 1px solid #373834;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -98,29 +104,29 @@ select, input, button {
 
 select {
     background-image: url('../img/arrow.png');
-background-repeat: no-repeat;
-background-position: 11px center;
-background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 11px center;
+    background-size: 22px;
 }
 
-#sign-in-button{
-    font-size: 30px;
+.do-it-btn {
+    font-size: 25px;
     background-color: white;
     border: 1px solid #c43335;
     color: #c43335;
     cursor: pointer;
 }
 
-#facebook-button{
+#facebook-button {
     background-image: url('../img/facebook_logo.png');
-background-position: 29px center;
-background-repeat: no-repeat;
-font-size: 17px;
-background-color: #2a2e34;
-color: white;
-background-size: 30px;
-text-align: right;
-text-indent: 15px;
+    background-position: 29px center;
+    background-repeat: no-repeat;
+    font-size: 17px;
+    background-color: #2a2e34;
+    color: white;
+    background-size: 30px;
+    text-align: right;
+    text-indent: 15px;
 }
 
 .sign-up-container {
@@ -134,37 +140,260 @@ text-indent: 15px;
 
 /*----------------------------------------- scales ---------------------------------------------*/
 
-#scales{
-width: 90%;
-margin: auto;    
+#scales-wrapper {
+    width: 90%;
+    margin: auto;
+    position: relative;
 }
 
 #scales-header {
-   color: #fff;
-font-size: 14px;
-text-align: right;
+    color: #fff;
+    font-size: 14px;
+    text-align: right;
+    line-height: 16px;
+}
+
+.lables-wrapper {
+    height: 23px;
+    font-weight: bold;
+    position: relative;
 }
 
 input[type=range] {
-   -webkit-appearance: none;
-width: 100%;
-height: 20px;
-border: 2px solid #000;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    border: 2px solid #000;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-     -webkit-appearance: none;
+    -webkit-appearance: none;
     background-image: url('../img/slider-button.png');
-background-repeat: no-repeat;
-background-size: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 25px;
     height: 30px;
 }
 
-.right{
-    float: right;   
+.right {
+    position: absolute;
+    right: 0;
 }
 
-.left{
-    float: left;
+.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#scales footer {
+    background-color: #000;
+    width: 100%;
+    padding-right: 45px;
+    padding-left: 45px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#scales footer button {
+    margin-top: 15px;
+}
+
+/*----------------------------------------- results ---------------------------------------------*/
+
+#results {
+    width: 93%;
+    margin: auto;
+    position: relative;
+}
+
+#results-header {
+}
+
+#results-text {
+    color: #fff;
+    font-size: 25px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#thanks {
+    font-weight: bold;
+    letter-spacing: 17.3px;
+    text-indent: -19px;
+}
+
+#for-signup {
+}
+
+#results-header .image-container {
+    margin: 0;
+    display: inline-block;
+}
+
+#results-btn-wrapper{
+position: absolute;
+bottom: 0;
+width: 100%;
+right: 0;    
+}
+
+#share-btn {
+    background-image: url('../img/facebook_share.png');
+}
+
+#back-to-edit-btn {
+    background-image: url('../img/edit_pencil.png');
+}
+
+.results-btn {
+    color: #fff;
+    width: 46%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: transparent;
+    border: 1px solid;
+    font-size: 14px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 19px;
+    background-position-x: 94%;
+    border-radius: 11px;
+}
+
+.results-wrapper {
+    position: relative;
+}
+
+.results-input {
+    background-color: #fff;
+    height: 28px;
+    border-radius: 11px;
+    border: 1px solid;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.results-input-fill {
+    height: 100%;
+    width: 30%;
+    border-radius: 11px;
+    display: inline-block;
+    position: absolute;
+}
+
+.results-input:nth-child(odd) {
+    border-color: #c43336;
+}
+
+.results-input:nth-child(even) {
+    border-color: #ebbf5e;
+}
+
+.results-input-fill:nth-child(odd) {
+    background-color: #c43336;
+}
+
+.results-input-fill:nth-child(even) {
+    background-color: #ebbf5e;
+}
+
+/*----------------------------------------- icons ---------------------------------------------*/
+.icon {
+    background-repeat: no-repeat;
+    background-size: 57px;
+    height: 100%;
+    width: 27px;
+}
+
+.icon.right {
+    right: 5px;
+    background-position: 99%;
+}
+
+.icon.left {
+    left: 5px;
+    background-position-x: -31px;
+}
+
+
+.visual {
+    background-image: url('../img/eye.png');
+}
+
+
+.textual {
+    background-image: url('../img/textual.png');
+    background-position-x: -31px;
+}
+
+.independent {
+    background-image: url('../img/independent.png');
+    background-position: 99%;
+}
+
+.social {
+    background-image: url('../img/social.png');
+}
+
+.bouncy {
+    background-image: url('../img/jumping.png');
+    background-position: 99%;
+}
+
+.linear {
+    background-image: url('../img/liniar.png');
+}
+
+.passive {
+    background-image: url('../img/pasive.png');
+    background-position: 99%;
+}
+
+.active {
+    background-image: url('../img/active.png');
+}
+
+
+.autodidactic {
+    background-image: url('../img/autodidactic.png');
+    background-position: 99%;
+}
+
+.framed {
+    background-image: url('../img/frame.png');
+}
+
+.games {
+    background-image: url('../img/gaming.png');
+    background-position: 99%;
+}
+
+.serious {
+    background-image: url('../img/tie.png');
+}
+
+.subject {
+    background-image: url('../img/onetheme.png');
+    background-position: 99%;
+}
+
+.interdisciplinary {
+    background-image: url('../img/manytheme.png');
+}
+
+/*----------------------------------------- fill icons ---------------------------------------------*/
+
+.fill-icon {
+    background-repeat: repeat;
+}
+
+.results-input-fill.icon{
+    width: 30%;
+}
+.results-input-fill.visual {
+    background-position: 0px;
 }

@@ -1,8 +1,8 @@
 <section id="sign-up">
     
-    <div class="sign-up-container">
-        <input type="text" name="text1" placeholder="שם" />
-        <select name="select1">
+    <div class="sign-up-container" data-ng-init="user={}">
+        <input type="text" name="text1" placeholder="שם" data-ng-model="user.name" />
+        <select name="select1" data-ng-model="user.age">
             <option value="" disabled selected>גיל</option>
             <option value="עד 18">עד 18</option>
             <option value="19-25">19-25</option>
@@ -10,19 +10,19 @@
             <option value="36-45">36-45</option>
             <option value="46 ומעלה">46 ומעלה</option>
         </select>
-        <select name="select1">
+        <select name="select1" data-ng-model="user.gender">
             <option value="" disabled selected>מין</option>
             <option value="ז">ז</option>
             <option value="נ">נ</option>
         </select>
-        <select name="select1">
+        <select name="select1" data-ng-model="user.profession">
             <option value="" disabled selected>מקצוע</option>
             <option value="מורה ביסודי">מורה ביסודי</option>
             <option value="מורה בתיכון">מורה בתיכון</option>
             <option value="תלמיד">תלמיד</option>
             <option value="אחר">אחר</option>
         </select>
-        <select name="select1">
+        <select name="select1" data-ng-model="user.study">
             <option value="" disabled selected>תחום לימודים</option>
             <option value="מדעי הרוח">מדעי הרוח</option>
             <option value="שפה">שפה</option>
@@ -30,8 +30,8 @@
             <option value="מדעי החברה">מדעי החברה</option>
             <option value="אחר">אחר</option>
         </select>
-        <button id="sign-in-button">התחברות</button>
-        <button id="facebook-button">התחברות באמצעות פייסבוק</button>
+        <button class="do-it-btn" data-ng-click="signup()">התחברות</button>
+        <button id="facebook-button" data-ng-click="signupWithFb()">התחברות באמצעות פייסבוק</button>
     </div>
     <footer></footer>
 </section>
