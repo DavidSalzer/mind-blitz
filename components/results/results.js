@@ -1,12 +1,6 @@
-mindBlitzApp.controller('results', ['$scope', function ($scope) {
+mindBlitzApp.controller('results', ['$scope', 'resultsData', function ($scope, resultsData) {
+    $scope.data = resultsData.getResults();
+    //To do: get from server the data
+   
 
-    $scope.data = {
-        "visualTextual": 1,
-        "independentSocial": 1,
-        "bouncyLinear": 1,
-        "activePassive": 1,
-        "autodidacticFramed": 1,
-        "gamesSerious": 1,
-        "subjectInterdisciplinary": 1
-    }
 } ]);

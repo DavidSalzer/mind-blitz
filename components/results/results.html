@@ -5,7 +5,7 @@
                 <div class="right">ויזואלי</div>
                 <div class="left">טקסטואלי</div>
             </div>
-            <div class="results-input"><div class="right icon visual"></div><div class="results-input-fill icon visual"></div><div class="left icon textual"></div></div>
+            <div class="results-input"><div class="right icon visual"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'visual right':data.visualTextual<=5, 'textual left':data.visualTextual>5}" data-ng-style="{'width':data.visualTextual*10+'%'}"></div><div class="left icon textual"></div></div>
         </div>
 
         <div class="results-wrapper">
@@ -13,7 +13,7 @@
                 <div class="right">עצמאי</div>
                 <div class="left">חברתי</div>
             </div>
-            <div class="results-input"><div class="right icon independent"></div><div class="results-input-fill"></div><div class="left icon social"></div></div>
+            <div class="results-input"><div class="right icon independent"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'independent right':data.independentSocial<=5, 'social left':data.independentSocial>5}" data-ng-style="{'width':data.independentSocial*10+'%'}"></div><div class="left icon social"></div></div>
         </div>
 
         <div class="results-wrapper">
@@ -21,7 +21,7 @@
                 <div class="right">קופצני</div>
                 <div class="left">לינארי</div>
             </div>
-            <div class="results-input"><div class="right icon bouncy"></div><div class="results-input-fill"></div><div class="left icon linear"></div></div>
+            <div class="results-input"><div class="right icon bouncy"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'bouncy right':data.bouncyLinear<=5, 'linear left':data.bouncyLinear>5}" data-ng-style="{'width':data.bouncyLinear*10+'%'}"></div><div class="left icon linear"></div></div>
         </div>
 
         <div class="results-wrapper">
@@ -29,7 +29,7 @@
                 <div class="right">פסיבי</div>
                 <div class="left">אקטיבי</div>
             </div>
-            <div class="results-input"><div class="right icon passive"></div><div class="results-input-fill"></div><div class="left icon active"></div></div>
+            <div class="results-input"><div class="right icon passive"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'passive right':data.activePassive<=5, 'active left':data.activePassive>5}" data-ng-style="{'width':data.activePassive*10+'%'}"></div><div class="left icon active"></div></div>
         </div>
 
         <div class="results-wrapper">
@@ -37,7 +37,7 @@
                 <div class="right">אוטו דידקטי</div>
                 <div class="left">מסגרתי</div>
             </div>
-            <div class="results-input"><div class="right icon autodidactic"></div><div class="results-input-fill"></div><div class="left icon framed"></div></div>
+            <div class="results-input"><div class="right icon autodidactic"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'autodidactic right':data.autodidacticFramed<=5, 'framed left':data.autodidacticFramed>5}" data-ng-style="{'width':data.autodidacticFramed*10+'%'}"></div><div class="left icon framed"></div></div>
         </div>
 
         <div class="results-wrapper">
@@ -45,7 +45,7 @@
                 <div class="right">משחקי</div>
                 <div class="left">רציני</div>
             </div>
-            <div class="results-input"><div class="right icon games"></div><div class="results-input-fill"></div><div class="left icon serious"></div></div>
+            <div class="results-input"><div class="right icon games"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'games right':data.gamesSerious<=5, 'serious left':data.gamesSerious>5}" data-ng-style="{'width':data.gamesSerious*10+'%'}"></div><div class="left icon serious"></div></div>
         </div>
 
         <div class="results-wrapper">
@@ -53,7 +53,7 @@
                 <div class="right">נושאי</div>
                 <div class="left">אינטרדיסציפלינרי</div>
             </div>
-            <div class="results-input"><div class="right icon subject"></div><div class="results-input-fill"></div><div class="left icon interdisciplinary"></div></div>
+            <div class="results-input"><div class="right icon subject"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'subject right':data.subjectInterdisciplinary<=5, 'interdisciplinary left':data.subjectInterdisciplinary>5}" data-ng-style="{'width':data.subjectInterdisciplinary*10+'%'}"></div><div class="left icon interdisciplinary"></div></div>
         </div>
     </div>
 </section>

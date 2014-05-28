@@ -1,37 +1,39 @@
 <section id="sign-up">
-    
-    <div class="sign-up-container" data-ng-init="user={}">
-        <input type="text" name="text1" placeholder="שם" data-ng-model="user.name" />
-        <select name="select1" data-ng-model="user.age">
-            <option value="" disabled selected>גיל</option>
-            <option value="עד 18">עד 18</option>
-            <option value="19-25">19-25</option>
-            <option value="26-35">26-35</option>
-            <option value="36-45">36-45</option>
-            <option value="46 ומעלה">46 ומעלה</option>
-        </select>
-        <select name="select1" data-ng-model="user.gender">
-            <option value="" disabled selected>מין</option>
-            <option value="ז">ז</option>
-            <option value="נ">נ</option>
-        </select>
-        <select name="select1" data-ng-model="user.profession">
-            <option value="" disabled selected>מקצוע</option>
-            <option value="מורה ביסודי">מורה ביסודי</option>
-            <option value="מורה בתיכון">מורה בתיכון</option>
-            <option value="תלמיד">תלמיד</option>
-            <option value="אחר">אחר</option>
-        </select>
-        <select name="select1" data-ng-model="user.study">
-            <option value="" disabled selected>תחום לימודים</option>
-            <option value="מדעי הרוח">מדעי הרוח</option>
-            <option value="שפה">שפה</option>
-            <option value="מתמטיקה ומדעים">מתמטיקה ומדעים</option>
-            <option value="מדעי החברה">מדעי החברה</option>
-            <option value="אחר">אחר</option>
-        </select>
-        <button class="do-it-btn" data-ng-click="signup()">התחברות</button>
-        <button id="facebook-button" data-ng-click="signupWithFb()">התחברות באמצעות פייסבוק</button>
+
+    <div class="sign-up-container">
+        <form name="contactForm" novalidate>
+            <input type="text" name="text1" placeholder="שם" data-ng-model="user.name" />
+            <select name="age" data-ng-model="user.age" data-ng-required="!user.age" data-ng-class="{'required':contactForm.age.$error.required}">
+                <option value="" disabled selected>גיל</option>
+                <option value="עד 18">עד 18</option>
+                <option value="19-25">19-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46 ומעלה">46 ומעלה</option>
+            </select>
+            <select name="gender" data-ng-model="user.gender" data-ng-required="!user.gender" data-ng-class="{'required':contactForm.gender.$error.required}">
+                <option value="" disabled selected>מין</option>
+                <option value="ז">ז</option>
+                <option value="נ">נ</option>
+            </select>
+            <select name="profession" data-ng-model="user.profession" data-ng-required="!user.profession" data-ng-class="{'required':contactForm.profession.$error.required}">
+                <option value="" disabled selected>מקצוע</option>
+                <option value="מורה ביסודי">מורה ביסודי</option>
+                <option value="מורה בתיכון">מורה בתיכון</option>
+                <option value="תלמיד">תלמיד</option>
+                <option value="אחר">אחר</option>
+            </select>
+            <select name="study" data-ng-model="user.study" data-ng-required="!user.study" data-ng-class="{'required':contactForm.study.$error.required}">
+                <option value="" disabled selected>תחום לימודים</option>
+                <option value="מדעי הרוח">מדעי הרוח</option>
+                <option value="שפה">שפה</option>
+                <option value="מתמטיקה ומדעים">מתמטיקה ומדעים</option>
+                <option value="מדעי החברה">מדעי החברה</option>
+                <option value="אחר">אחר</option>
+            </select>
+            <button type="submit" class="do-it-btn" data-ng-click="signup()">התחברות</button>
+            <button id="facebook-button" data-ng-click="signupWithFb()">התחברות באמצעות פייסבוק</button>
+        </form>
     </div>
     <footer></footer>
 </section>

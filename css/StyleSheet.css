@@ -4,6 +4,7 @@ body {
     color: #373834;
     direction: rtl;
     font-family: 'Open Sans Hebrew';
+    background-image: url('../img/background_small.jpg');
 }
 
 /*disable highlight*/
@@ -45,7 +46,7 @@ select {
     max-width: 650px;
     width: 100%;
     margin: auto;
-    background-image: url('../img/background_small.jpg');
+    
     padding-top: 16px;
 }
 
@@ -78,6 +79,8 @@ select {
     color: #eabf5d;
     font-size: 20px;
     font-weight: bold;
+    margin-top: 20px;
+    display: block;
 }
 
 
@@ -100,6 +103,10 @@ select, input, button {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+select.required, input.required {
+    border-color: #c43335;
 }
 
 select {
@@ -171,8 +178,9 @@ input[type="range"]::-webkit-slider-thumb {
     background-image: url('../img/slider-button.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 25px;
-    height: 30px;
+    height: 25px;
 }
 
 .right {
@@ -233,11 +241,11 @@ input[type="range"]::-webkit-slider-thumb {
     display: inline-block;
 }
 
-#results-btn-wrapper{
-position: absolute;
-bottom: 0;
-width: 100%;
-right: 0;    
+#results-btn-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    right: 0;
 }
 
 #share-btn {
@@ -277,34 +285,27 @@ right: 0;
     position: relative;
 }
 
-.results-input-fill {
-    height: 100%;
-    width: 30%;
-    border-radius: 11px;
-    display: inline-block;
-    position: absolute;
-}
 
-.results-input:nth-child(odd) {
-    border-color: #c43336;
-}
-
-.results-input:nth-child(even) {
+.results-wrapper:nth-child(odd) .results-input {
     border-color: #ebbf5e;
 }
 
-.results-input-fill:nth-child(odd) {
-    background-color: #c43336;
+.results-wrapper:nth-child(even) .results-input {
+    border-color: #c43336;
 }
 
-.results-input-fill:nth-child(even) {
+.results-wrapper:nth-child(odd) .results-input-fill {
     background-color: #ebbf5e;
+}
+
+.results-wrapper:nth-child(even) .results-input-fill {
+    background-color: #c43336;
 }
 
 /*----------------------------------------- icons ---------------------------------------------*/
 .icon {
     background-repeat: no-repeat;
-    background-size: 57px;
+    background-size: contain;
     height: 100%;
     width: 27px;
 }
@@ -316,84 +317,148 @@ right: 0;
 
 .icon.left {
     left: 5px;
-    background-position-x: -31px;
 }
 
 
 .visual {
-    background-image: url('../img/eye.png');
+    background-image: url('../img/icons/eye_black.png');
 }
 
 
 .textual {
-    background-image: url('../img/textual.png');
-    background-position-x: -31px;
+    background-image: url('../img/icons/textual_black.png');
 }
 
 .independent {
-    background-image: url('../img/independent.png');
-    background-position: 99%;
+    background-image: url('../img/icons/independent_black.png');
 }
 
 .social {
-    background-image: url('../img/social.png');
+    background-image: url('../img/icons/social_black.png');
 }
 
 .bouncy {
-    background-image: url('../img/jumping.png');
-    background-position: 99%;
+    background-image: url('../img/icons/jumping_black.png');
 }
 
 .linear {
-    background-image: url('../img/liniar.png');
+    background-image: url('../img/icons/liniar_black.png');
 }
 
 .passive {
-    background-image: url('../img/pasive.png');
-    background-position: 99%;
+    background-image: url('../img/icons/pasive_black.png');
 }
 
 .active {
-    background-image: url('../img/active.png');
+    background-image: url('../img/icons/active_black.png');
 }
 
 
 .autodidactic {
-    background-image: url('../img/autodidactic.png');
-    background-position: 99%;
+    background-image: url('../img/icons/autodidactic_black.png');
 }
 
 .framed {
-    background-image: url('../img/frame.png');
+    background-image: url('../img/icons/frame_black.png');
 }
 
 .games {
-    background-image: url('../img/gaming.png');
-    background-position: 99%;
+    background-image: url('../img/icons/gaming_black.png');
 }
 
 .serious {
-    background-image: url('../img/tie.png');
+    background-image: url('../img/icons/tie_black.png');
 }
 
 .subject {
-    background-image: url('../img/onetheme.png');
-    background-position: 99%;
+    background-image: url('../img/icons/onetheme_black.png');
 }
 
 .interdisciplinary {
-    background-image: url('../img/manytheme.png');
+    background-image: url('../img/icons/manytheme_black.png');
 }
 
 /*----------------------------------------- fill icons ---------------------------------------------*/
+
+.results-input-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    display: inline-block;
+    z-index: 1;
+    background-repeat:repeat; 
+}
+
 
 .fill-icon {
     background-repeat: repeat;
 }
 
-.results-input-fill.icon{
-    width: 30%;
+.results-input-fill.right{
+    right: 0;
+    background-position: right;
 }
+
+.results-input-fill.left{
+    left: 0;
+    background-position: left;
+}
+
+
 .results-input-fill.visual {
-    background-position: 0px;
+    background-image: url('../img/icons/eye_white.png');
+}
+
+
+.results-input-fill.textual {
+    background-image: url('../img/icons/textual_white.png');
+}
+
+.results-input-fill.independent {
+    background-image: url('../img/icons/independent_white.png');
+}
+
+.results-input-fill.social {
+    background-image: url('../img/icons/social_white.png');
+}
+
+.results-input-fill.bouncy {
+    background-image: url('../img/icons/jumping_white.png');
+}
+
+.results-input-fill.linear {
+    background-image: url('../img/icons/liniar_white.png');
+}
+
+.results-input-fill.passive {
+    background-image: url('../img/icons/pasive_white.png');
+}
+
+.results-input-fill.active {
+    background-image: url('../img/icons/active_white.png');
+}
+
+
+.results-input-fill.autodidactic {
+    background-image: url('../img/icons/autodidactic_white.png');
+}
+
+.results-input-fill.framed {
+    background-image: url('../img/icons/frame_white.png');
+}
+
+.results-input-fill.games {
+    background-image: url('../img/icons/gaming_white.png');
+}
+
+.results-input-fill.serious {
+    background-image: url('../img/icons/tie_white.png');
+}
+
+.results-input-fill.subject {
+    background-image: url('../img/icons/onetheme_white.png');
+}
+
+.results-input-fill.interdisciplinary {
+    background-image: url('../img/icons/manytheme_white.png');
 }

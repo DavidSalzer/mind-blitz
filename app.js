@@ -12,8 +12,8 @@ mindBlitzApp.config(function ($stateProvider, $urlRouterProvider) {
 		            controller: "signup"
 		        },
                 "header": {
-		            templateUrl: "components/signup/signupHeader.html",
-		            controller: "signup"
+		            templateUrl: "components/signup/signupHeader.html"
+		           
 		        }
 		    }
 		})
@@ -25,8 +25,7 @@ mindBlitzApp.config(function ($stateProvider, $urlRouterProvider) {
 		            controller: "scales"
 		        },
                 "header": {
-		            templateUrl: "components/scales/scalesHeader.html",
-		            controller: "scales"
+		            templateUrl: "components/scales/scalesHeader.html"
 		        }
 		    }
 		})
@@ -39,7 +38,7 @@ mindBlitzApp.config(function ($stateProvider, $urlRouterProvider) {
 		        },
                 "header": {
 		            templateUrl: "components/results/resultsHeader.html",
-		            controller: "results"
+		            controller: "resultsHeader"
 		        }
 		    }
 		})
