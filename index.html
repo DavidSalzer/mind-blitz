@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="mindBlitzApp">
+    <head>
+        <meta charset="utf-8" />
+        <title>MindBlitz</title>
+
+        <meta name="viewport" content="width=width-device, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/Reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/StyleSheet.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+        <script src="js/angular-ui-router.min.js"></script>
+
+        <script src="app.js"></script>
+
+        <script src="components/signup/signup.js"></script>
+        <script src="components/scales/scales.js"></script>
+        <script src="components/results/results.js"></script>
+
+    </head>
+    <body>
+        <header class="main-header" data-ui-view="header">
+       
+    </header>
+        <div class="container">
+            <div data-ui-view="main"></div>
+        </div>
+    </body>
+</html>
