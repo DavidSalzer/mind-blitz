@@ -45,7 +45,7 @@ select {
     max-width: 650px;
     width: 100%;
     margin: auto;
-    padding-top: 16px;
+    padding-top: 10px;
 }
 
 .main-header {
@@ -56,7 +56,7 @@ select {
     text-align: center;
     padding-right: 23px;
     padding-left: 23px;
-    padding-top: 18px;
+    padding-top: 8px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box; /* Opera/IE 8+ */
@@ -92,7 +92,7 @@ select, input, button {
     padding: 0;
     width: 100%;
     height: 35px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     direction: rtl;
     text-indent: 20px;
     border-radius: 50px;
@@ -142,6 +142,7 @@ select {
 
 .sign-up-container {
     padding-right: 25px;
+    padding-top: 18px;
     padding-left: 25px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -151,11 +152,16 @@ select {
 
 /*----------------------------------------- scales ---------------------------------------------*/
 
+#scales input {
+    margin-bottom: 30px;
+}
+
 #scales-wrapper {
     width: 90%;
     margin: auto;
     position: relative;
     font-size: 14px;
+    padding-top: 15px;
 }
 
 #scales-header {
@@ -167,7 +173,7 @@ select {
 }
 
 .lables-wrapper {
-    height: 23px;
+    height: 18px;
     font-weight: bold;
     position: relative;
 }
@@ -175,7 +181,7 @@ select {
 input[type=range] {
     -webkit-appearance: none;
     width: 100%;
-    height: 20px;
+    height: 10px;
     border: 2px solid #000;
 }
 
@@ -224,6 +230,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #results-header {
+    padding-top: 10px;
 }
 
 #results-text {
@@ -252,6 +259,7 @@ input[type="range"]::-webkit-slider-thumb {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    padding-top: 5px;
 }
 
 #results-header .image-container {
