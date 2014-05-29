@@ -1,5 +1,6 @@
 <section id="results">
-    <div>
+    <p>מי אני?</p>
+    <div class="results-container">
         <div class="results-wrapper">
             <div class="lables-wrapper">
                 <div class="right">ויזואלי</div>
@@ -56,4 +57,7 @@
             <div class="results-input"><div class="right icon subject"></div><div data-ng-class="{'results-input-fill':true, 'icon':true, 'subject right':data.subjectInterdisciplinary<=5, 'interdisciplinary left':data.subjectInterdisciplinary>5}" data-ng-style="{'width':data.subjectInterdisciplinary*10+'%'}"></div><div class="left icon interdisciplinary"></div></div>
         </div>
     </div>
+    <footer>
+        <button class="do-it-btn" data-ng-click="send()">התנתק</button>
+    </footer>
 </section>
