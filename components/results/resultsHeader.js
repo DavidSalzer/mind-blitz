@@ -1,7 +1,15 @@
-mindBlitzApp.controller('resultsHeader', ['$scope','$state', function ($scope,$state) {
+mindBlitzApp.controller('resultsHeader', ['$scope','$state','$http', function ($scope,$state,$http) {
     
     $scope.share=function(){
-        //To do: create a picture and share on fb
+		html2canvas(document.body, {
+		  onrendered: function(canvas) {
+			var dataURL = canvas.toDataURL();
+			//console.log({imgBase64: dataURL});
+			$http.post("/data/getImage.php", {"imgBase64": dataURL}).success(function(data){
+			  console.log(data);
+			});
+		  }
+		});
     }
 
     
