@@ -14,13 +14,13 @@ mindBlitzApp.factory('resultsData', ['$http','$q',function ($http,$q) {
 						gender: "",
 						profession: "",
 						study: "",
-						visualtextual: 5,
-						independentsocial: 5,
-						bouncylinear: 5,
-						activepassive: 5,
-						autodidacticframed: 5,
-						gamesserious: 5,
-						subjectinterdisciplinary: 5
+						visualtextual: "5",
+						independentsocial: "5",
+						bouncylinear: "5",
+						activepassive:"5",
+						autodidacticframed: "5",
+						gamesserious: "5",
+						subjectinterdisciplinary: "5"
 					}
 				if (key){
 					a=this.getData(key);
