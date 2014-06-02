@@ -17,26 +17,35 @@ mindBlitzApp.factory('facebook', [function () {
     } (document, 'script', 'facebook-jssdk'));
 
     return {
-        login: function () {
+        login: function (res) {
             FB.getLoginStatus(function (response) {
                 if (response.status === 'connected') {
                     FB.api('/me', function (response) {
-                        console.log(response);
-                        console.log('Good to see you, ' + response.name + '.');
-
-                        user = {
-                            name: response.first_name,
-                            lastName: response.last_name,
-                            img: 'https://graph.facebook.com/' + response.id + '/picture'
-                        }
-                        console.log('Logged in.');
+						res(response);
                     });
                 }
                 else {
-                    FB.login(function () {
+                    FB.login(function (response) {
+						if (response.status === 'connected') {
+							FB.api('/me', function (response) {
+								res(response);
+							});
+						}
                     }, { scope: 'email' });
                 }
             });
-        }
+        },
+		share:function(m){
+			FB.ui(
+			{
+				method: 'feed',
+				name: m.name,
+				link: m.link,
+				picture: m.picture,
+				caption: m.caption,
+				description: m.description,
+				message: ''
+			});
+		}
     }
 } ]);

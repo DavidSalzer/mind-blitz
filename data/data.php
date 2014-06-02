@@ -47,8 +47,8 @@ switch ($_GET['type']) {
 function set($data){
 	global $Spreadsheet;
 	if (!(isset($data->key) && $data->key!=null)){
-		if (isset($data->facebookID) && $data->facebookID!=null)
-			$data->key=$data->facebookID;
+		if (isset($data->facebookid) && $data->facebookid!=null)
+			$data->key=$data->facebookid;
 		else
 			$data->key=sha1( microtime());
 	}

@@ -1,7 +1,7 @@
 var mindBlitzApp = angular.module('mindBlitzApp', ['ui.router']);
 
 mindBlitzApp.config(function ($stateProvider, $urlRouterProvider) {
-    //$urlRouterProvider.otherwise('/signup');
+    $urlRouterProvider.otherwise('/signup');
 
     $stateProvider
 		.state('signup', {
@@ -39,6 +39,19 @@ mindBlitzApp.config(function ($stateProvider, $urlRouterProvider) {
                 "header": {
 		            templateUrl: "components/results/resultsHeader.html",
 		            controller: "resultsHeader"
+		        }
+		    }
+		})
+		.state('otherResults', {
+		    url: "/results/:key",
+		    views: {
+		        "main": {
+		            templateUrl: "components/otherResults/otherResults.html",
+		            controller: "otherResults"
+		        },
+                "header": {
+		            templateUrl: "components/otherResults/otherResultsHeader.html",
+		            controller: "otherResultsHeader"
 		        }
 		    }
 		})
