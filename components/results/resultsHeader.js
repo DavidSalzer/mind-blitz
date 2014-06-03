@@ -4,11 +4,13 @@ mindBlitzApp.controller('resultsHeader', ['$scope','$state','$http','facebook','
 		resultsData.getResults()
 			.then(function (data) {
 				facebook.share({
-					name: 'mind blitz.',
+					name: "I've been mind blitzed",
+
 					link: 'http://mind-blitz.bookso.co.il/#/results/'+data.key,
 					picture: 'http://mind-blitz.bookso.co.il/img/logo_small.png',
 					caption:"",
 					description: '',
+                    message: ""
 				})
 			})
 		/*html2canvas(document.body, {

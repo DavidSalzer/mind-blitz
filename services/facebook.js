@@ -44,7 +44,7 @@ mindBlitzApp.factory('facebook', [function () {
 				picture: m.picture,
 				caption: m.caption,
 				description: m.description,
-				message: ''
+				message:m.message
 			});
 		}
     }
