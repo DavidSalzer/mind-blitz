@@ -5,8 +5,9 @@ mindBlitzApp.controller('otherResultsHeader', ['$stateParams','$scope','$state',
 			.then(function (data) {
 				facebook.share({
 					name: 'mind blitz.',
-					link: 'http://mind-blitz.cambium-team.com/#/results/'+$stateParams.key,
-					picture: 'http://mind-blitz.cambium-team.com/img/logo_small.png',
+					link: 'http://mind-blitz.bookso.co.il/#/results/'+$stateParams.key,
+					picture: 'http://mind-blitz.bookso.co.il/img/logo_small.png',
+					caption:"",
 					caption:"",
 					description: '',
 				})

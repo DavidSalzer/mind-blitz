@@ -28,14 +28,14 @@ mindBlitzApp.controller('signup', ['$scope', '$state', 'facebook','resultsData',
 
     $scope.signupWithFb = function () {
         facebook.login(function(response){
-			resultsData.getDataByKey(response.id)
+			resultsData.getDataByKey("f"+response.id)
 				.then(function(data){
 					if(data!="null"){
 						resultsData.setResults(data);
 						$state.go("results");
 					}
 				})
-			$scope.data.facebookid=response.id;
+			$scope.data.facebookid="f"+response.id;
 			$scope.data.name=response.name;
 			$scope.data.age=response.age_range;
 			$scope.data.gender=response.gender;
