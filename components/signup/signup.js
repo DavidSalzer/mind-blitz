@@ -9,7 +9,7 @@ mindBlitzApp.controller('signup', ['$scope', '$state', 'facebook','resultsData',
 	$scope.data = resultsData.getResults();
 	$scope.data.then(function(data){
 		$scope.data=data;
-		if ($scope.data.key!=null){
+		if ($scope.data.startAns){
 			$state.go("results");
 		}
 	})
@@ -36,6 +36,7 @@ mindBlitzApp.controller('signup', ['$scope', '$state', 'facebook','resultsData',
 					}
 				})
 			$scope.data.facebookid="f"+response.id;
+			$scope.data.key=$scope.data.facebookid;
 			$scope.data.name=response.name;
 			$scope.data.age=response.age_range;
 			$scope.data.gender=response.gender;

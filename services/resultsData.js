@@ -9,7 +9,7 @@ mindBlitzApp.factory('resultsData', ['$http','$q',function ($http,$q) {
 			}
 			if (!results){
 				results = {
-						key: null,
+						key: "t:"+Date.now()+"r:"+Math.random(),
 						facebookid: null,
 						name: "",
 						age: "",
@@ -22,7 +22,8 @@ mindBlitzApp.factory('resultsData', ['$http','$q',function ($http,$q) {
 						activepassive:"5",
 						autodidacticframed: "5",
 						gamesserious: "5",
-						subjectinterdisciplinary: "5"
+						subjectinterdisciplinary: "5",
+						startAns:false,
 					}
 			}
 			deferred.resolve(results);
@@ -39,6 +40,7 @@ mindBlitzApp.factory('resultsData', ['$http','$q',function ($http,$q) {
 		},
 		setResults:function(data){
 			results=data;
+			results.startAns=true;
 			localStorage.setItem('data', JSON.stringify(results));
 		},
 		publishResults:function (){
@@ -56,7 +58,11 @@ mindBlitzApp.factory('resultsData', ['$http','$q',function ($http,$q) {
 		},
 		getDataByKey:function(key){
 			var deferred = $q.defer();
-			$http.post('/data/data.php?type=get', {key:key}).success(function(data){deferred.resolve(data);});
+			$http.post('/data/data.php?type=get', {key:key}).success(function(data){
+				results=data;
+				results.startAns=true;
+				deferred.resolve(results);
+			});
 			return deferred.promise;
 		}
 		
