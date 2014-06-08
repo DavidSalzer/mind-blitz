@@ -6,8 +6,8 @@ mindBlitzApp.controller('resultsHeader', ['$scope','$state','$http','facebook','
 				facebook.share({
 					name: "I've been mind blitzed",
 
-					link: 'http://mind-blitz.bookso.co.il/#/results/'+data.key,
-					picture: 'http://mind-blitz.bookso.co.il/img/logo_small.png',
+					link: 'http://mindblitz.mindcet.org/#/results/'+data.key,
+					picture: 'http://mindblitz.mindcet.org/img/logo_small.png',
 					caption:"",
 					description: '',
                     message: ""
