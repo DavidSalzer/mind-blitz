@@ -2,7 +2,7 @@
 
     <div class="sign-up-container">
         <form name="contactForm" novalidate>
-            <input type="text" name="text1" placeholder="שם" data-ng-model="data.name" />
+            <input type="text" id="test" name="text1" placeholder="שם" data-ng-model="data.name" />            
             <select name="age" data-ng-model="data.age" data-ng-required="!data.age" data-ng-class="{'required':contactForm.age.$error.required}">
                 <option value="" disabled selected>גיל</option>
                 <option value="עד 18">עד 18</option>
