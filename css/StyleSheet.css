@@ -320,6 +320,15 @@ input[type=range]::-ms-thumb {
     padding-top: 5px;
 }
 
+#results select {
+    color: #ebbf5e;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 1px;
+	text-indent: 45%;
+}
+
 #results-header .image-container {
     margin: 0;
     display: inline-block;

@@ -9,20 +9,21 @@ mindBlitzApp.factory('resultsData', ['$http','$q',function ($http,$q) {
 			}
 			if (!results){
 				results = {
-						key: "t:"+Date.now()+"r:"+Math.random(),
-						facebookid: null,
+						key: "t."+Date.now()+"r."+Math.random(),
+						facebookId: null,
 						name: "",
 						age: "",
 						gender: "",
 						profession: "",
 						study: "",
-						visualtextual: "5",
-						independentsocial: "5",
-						bouncylinear: "5",
-						activepassive:"5",
-						autodidacticframed: "5",
-						gamesserious: "5",
-						subjectinterdisciplinary: "5",
+						email: "",
+						visualTextual: "5",
+						independentSocial: "5",
+						bouncyLinear: "5",
+						activePassive:"5",
+						autodidacticFramed: "5",
+						gamesSerious: "5",
+						subjectInterdisciplinary: "5",
 						startAns:false,
 					}
 			}

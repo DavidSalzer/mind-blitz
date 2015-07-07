@@ -4,6 +4,8 @@ mindBlitzApp.controller('scales', ['$scope', '$state', 'resultsData', function (
     $scope.data.then(function (data) {
         $scope.data = data;
         console.log(data);
+		if (data.startAns==false)
+			$state.go("signup");
         //$scope.data.visualTextual = 3;
     })
     //console.log( $scope.data);

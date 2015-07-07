@@ -1,5 +1,14 @@
 <section id="results">
-    <p>מי אני?</p>
+	<select name="query" data-ng-model="query">
+        <option value="me" selected>מי אני?</option>
+        <option value="male">גברים</option>
+        <option value="female">נשים</option>
+        <option value="עד 18">עד 18</option>
+        <option value="19-25">19-25</option>
+        <option value="26-35">26-35</option>
+        <option value="36-45">36-45</option>
+        <option value="46 ומעלה">46 ומעלה</option>
+    </select>
     <div class="results-container">
         <div class="results-wrapper">
             <div class="lables-wrapper">
@@ -8,8 +17,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon visual"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'visual right':data.visualtextual<=5, 'textual left':data.visualtextual>5}" 
-                    data-ng-style="data.visualtextual>5 && {'width':data.visualtextual*10+'%'} || data.visualtextual<=5 &&{'width':(10-data.visualtextual)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'visual right':data[query].visualTextual<=5, 'textual left':data[query].visualTextual>5}" 
+                    data-ng-style="data[query].visualTextual>5 && {'width':data[query].visualTextual*10+'%'} || data[query].visualTextual<=5 &&{'width':(10-data[query].visualTextual)*10+'%'}"></div>
                 <div class="left icon textual"></div>
             </div>
         </div>
@@ -21,8 +30,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon independent"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'independent right':data.independentsocial<=5, 'social left':data.independentsocial>5}" 
-                    data-ng-style="data.independentsocial>5 && {'width':data.independentsocial*10+'%'} || data.independentsocial<=5 &&{'width':(10-data.independentsocial)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'independent right':data[query].independentSocial<=5, 'social left':data[query].independentSocial>5}" 
+                    data-ng-style="data[query].independentSocial>5 && {'width':data[query].independentSocial*10+'%'} || data[query].independentSocial<=5 &&{'width':(10-data[query].independentSocial)*10+'%'}"></div>
                 <div class="left icon social"></div>
             </div>
         </div>
@@ -34,8 +43,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon bouncy"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'bouncy right':data.bouncylinear<=5, 'linear left':data.bouncylinear>5}" 
-                    data-ng-style="data.bouncylinear>5 && {'width':data.bouncylinear*10+'%'} || data.bouncylinear<=5 &&{'width':(10-data.bouncylinear)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'bouncy right':data[query].bouncyLinear<=5, 'linear left':data[query].bouncyLinear>5}" 
+                    data-ng-style="data[query].bouncyLinear>5 && {'width':data[query].bouncyLinear*10+'%'} || data[query].bouncyLinear<=5 &&{'width':(10-data[query].bouncyLinear)*10+'%'}"></div>
                 <div class="left icon linear"></div>
             </div>
         </div>
@@ -47,8 +56,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon passive"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'passive right':data.activepassive<=5, 'active left':data.activepassive>5}" 
-                    data-ng-style="data.activepassive>5 && {'width':data.activepassive*10+'%'} || data.activepassive<=5 &&{'width':(10-data.activepassive)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'passive right':data[query].activePassive<=5, 'active left':data[query].activePassive>5}" 
+                    data-ng-style="data[query].activePassive>5 && {'width':data[query].activePassive*10+'%'} || data[query].activePassive<=5 &&{'width':(10-data[query].activePassive)*10+'%'}"></div>
                 <div class="left icon active"></div>
             </div>
         </div>
@@ -60,8 +69,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon autodidactic"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'autodidactic right':data.autodidacticframed<=5, 'framed left':data.autodidacticframed>5}" 
-                    data-ng-style="data.autodidacticframed>5 && {'width':data.autodidacticframed*10+'%'} || data.autodidacticframed<=5 &&{'width':(10-data.autodidacticframed)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'autodidactic right':data[query].autodidacticFramed<=5, 'framed left':data[query].autodidacticFramed>5}" 
+                    data-ng-style="data[query].autodidacticFramed>5 && {'width':data[query].autodidacticFramed*10+'%'} || data[query].autodidacticFramed<=5 &&{'width':(10-data[query].autodidacticFramed)*10+'%'}"></div>
                 <div class="left icon framed"></div>
             </div>
         </div>
@@ -73,8 +82,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon games"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'games right':data.gamesserious<=5, 'serious left':data.gamesserious>5}" 
-                    data-ng-style="data.gamesserious>5 && {'width':data.gamesserious*10+'%'} || data.gamesserious<=5 &&{'width':(10-data.gamesserious)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'games right':data[query].gamesSerious<=5, 'serious left':data[query].gamesSerious>5}" 
+                    data-ng-style="data[query].gamesSerious>5 && {'width':data[query].gamesSerious*10+'%'} || data[query].gamesSerious<=5 &&{'width':(10-data[query].gamesSerious)*10+'%'}"></div>
                 <div class="left icon serious"></div>
             </div>
         </div>
@@ -86,8 +95,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon subject"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'subject right':data.subjectinterdisciplinary<=5, 'interdisciplinary left':data.subjectinterdisciplinary>5}" 
-                    data-ng-style="data.subjectinterdisciplinary>5 && {'width':data.subjectinterdisciplinary*10+'%'} || data.subjectinterdisciplinary<=5 &&{'width':(10-data.subjectinterdisciplinary)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'subject right':data[query].subjectInterdisciplinary<=5, 'interdisciplinary left':data[query].subjectInterdisciplinary>5}" 
+                    data-ng-style="data[query].subjectInterdisciplinary>5 && {'width':data[query].subjectInterdisciplinary*10+'%'} || data[query].subjectInterdisciplinary<=5 &&{'width':(10-data[query].subjectInterdisciplinary)*10+'%'}"></div>
                 <div class="left icon interdisciplinary"></div>
             </div>
         </div>

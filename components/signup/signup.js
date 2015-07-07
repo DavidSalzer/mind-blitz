@@ -15,9 +15,9 @@ mindBlitzApp.controller('signup', ['$scope', '$state', 'facebook','resultsData',
 	})
 	//console.log($scope.data);
     $scope.signup = function () {
-        //console.log($scope.data.data);
+        console.log($scope.contactForm.email.$error);
 		
-        if ($scope.data.age && $scope.data.gender && $scope.data.profession && $scope.data.study) {
+        if ($scope.data.name && $scope.data.age && $scope.data.gender && $scope.data.profession && $scope.data.study && $scope.data.email && !$scope.contactForm.email.$error.email) {
             //localStorage.setItem('dataData', JSON.stringify($scope.data));
             //console.log(JSON.parse(localStorage.getItem('dataData')));
 			resultsData.setResults($scope.data);
@@ -35,11 +35,12 @@ mindBlitzApp.controller('signup', ['$scope', '$state', 'facebook','resultsData',
 						$state.go("results");
 					}
 				})
-			$scope.data.facebookid="f"+response.id;
-			$scope.data.key=$scope.data.facebookid;
+			$scope.data.facebookId="f"+response.id;
+			$scope.data.key=$scope.data.facebookId;
 			$scope.data.name=response.name;
 			$scope.data.age=response.age_range;
 			$scope.data.gender=response.gender;
+			$scope.data.email=response.email;
 			$scope.$apply();
 			console.log(response);
 		});
