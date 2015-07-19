@@ -1,4 +1,4 @@
-mindBlitzApp.controller('results', ['$scope', 'resultsData', '$state', '$http', function ($scope, resultsData, $state, $http) {
+mindBlitzApp.controller('results', ['$scope', 'resultsData', '$state', '$http','Data', function ($scope, resultsData, $state, $http,Data) {
     //$scope.data = resultsData.getResults();
     $scope.getData = resultsData.getResults();
 	$scope.data=[];
@@ -8,7 +8,7 @@ mindBlitzApp.controller('results', ['$scope', 'resultsData', '$state', '$http', 
 		if (data.startAns==false)
 			$state.go("signup");
     })
-	$scope.query="me";
+	$scope.Data=Data;
 	$http.post('/data/data.php?type=getAvrage', {}).success(function(data){
 		for (var key in data) {
 			$scope.data[key]=data[key];

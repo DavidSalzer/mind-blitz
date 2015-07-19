@@ -1,5 +1,9 @@
 var mindBlitzApp = angular.module('mindBlitzApp', ['ui.router']);
 
+mindBlitzApp.factory('Data', function () {
+    return { query: 'me' };
+});
+
 mindBlitzApp.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/signup');
 

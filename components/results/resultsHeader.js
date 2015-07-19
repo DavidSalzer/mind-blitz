@@ -1,4 +1,4 @@
-mindBlitzApp.controller('resultsHeader', ['$scope','$state','$http','facebook','resultsData', function ($scope,$state,$http,facebook,resultsData) {
+mindBlitzApp.controller('resultsHeader', ['$scope','$state','$http','facebook','resultsData','Data', function ($scope,$state,$http,facebook,resultsData,Data) {
     
     $scope.share=function(){
 		resultsData.getResults()
@@ -24,6 +24,8 @@ mindBlitzApp.controller('resultsHeader', ['$scope','$state','$http','facebook','
 		  }
 		});*/
     }
+	$scope.Data=Data;
+
 
     
     $scope.back = function () {

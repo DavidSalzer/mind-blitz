@@ -1,14 +1,13 @@
 <section id="results">
-	<select name="query" data-ng-model="query">
-        <option value="me" selected>מי אני?</option>
-        <option value="male">גברים</option>
-        <option value="female">נשים</option>
-        <option value="עד 18">עד 18</option>
-        <option value="19-25">19-25</option>
-        <option value="26-35">26-35</option>
-        <option value="36-45">36-45</option>
-        <option value="46 ומעלה">46 ומעלה</option>
-    </select>
+	<p>{{data.name}}</p>
+	<p ng-if="Data.query=='me'">הפרופיל האישי שלי</p>
+	<p ng-if="Data.query=='male'">גברים</p>
+	<p ng-if="Data.query=='female'">נשים</p>
+	<p ng-if="Data.query=='עד 18'">עד 18</p>
+	<p ng-if="Data.query=='19-25'">19-25</p>
+	<p ng-if="Data.query=='26-35'">26-35</p>
+	<p ng-if="Data.query=='36-45'">36-45</p>
+	<p ng-if="Data.query=='46 ומעלה'">46 ומעלה</p>
     <div class="results-container">
         <div class="results-wrapper">
             <div class="lables-wrapper">
@@ -17,8 +16,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon visual"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'visual right':data[query].visualTextual<=5, 'textual left':data[query].visualTextual>5}" 
-                    data-ng-style="data[query].visualTextual>5 && {'width':data[query].visualTextual*10+'%'} || data[query].visualTextual<=5 &&{'width':(10-data[query].visualTextual)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'visual right':data[Data.query].visualTextual<=5, 'textual left':data[Data.query].visualTextual>5}" 
+                    data-ng-style="data[Data.query].visualTextual>5 && {'width':data[Data.query].visualTextual*10+'%'} || data[Data.query].visualTextual<=5 &&{'width':(10-data[Data.query].visualTextual)*10+'%'}"></div>
                 <div class="left icon textual"></div>
             </div>
         </div>
@@ -30,8 +29,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon independent"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'independent right':data[query].independentSocial<=5, 'social left':data[query].independentSocial>5}" 
-                    data-ng-style="data[query].independentSocial>5 && {'width':data[query].independentSocial*10+'%'} || data[query].independentSocial<=5 &&{'width':(10-data[query].independentSocial)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'independent right':data[Data.query].independentSocial<=5, 'social left':data[Data.query].independentSocial>5}" 
+                    data-ng-style="data[Data.query].independentSocial>5 && {'width':data[Data.query].independentSocial*10+'%'} || data[Data.query].independentSocial<=5 &&{'width':(10-data[Data.query].independentSocial)*10+'%'}"></div>
                 <div class="left icon social"></div>
             </div>
         </div>
@@ -43,8 +42,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon bouncy"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'bouncy right':data[query].bouncyLinear<=5, 'linear left':data[query].bouncyLinear>5}" 
-                    data-ng-style="data[query].bouncyLinear>5 && {'width':data[query].bouncyLinear*10+'%'} || data[query].bouncyLinear<=5 &&{'width':(10-data[query].bouncyLinear)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'bouncy right':data[Data.query].bouncyLinear<=5, 'linear left':data[Data.query].bouncyLinear>5}" 
+                    data-ng-style="data[Data.query].bouncyLinear>5 && {'width':data[Data.query].bouncyLinear*10+'%'} || data[Data.query].bouncyLinear<=5 &&{'width':(10-data[Data.query].bouncyLinear)*10+'%'}"></div>
                 <div class="left icon linear"></div>
             </div>
         </div>
@@ -56,8 +55,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon passive"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'passive right':data[query].activePassive<=5, 'active left':data[query].activePassive>5}" 
-                    data-ng-style="data[query].activePassive>5 && {'width':data[query].activePassive*10+'%'} || data[query].activePassive<=5 &&{'width':(10-data[query].activePassive)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'passive right':data[Data.query].activePassive<=5, 'active left':data[Data.query].activePassive>5}" 
+                    data-ng-style="data[Data.query].activePassive>5 && {'width':data[Data.query].activePassive*10+'%'} || data[Data.query].activePassive<=5 &&{'width':(10-data[Data.query].activePassive)*10+'%'}"></div>
                 <div class="left icon active"></div>
             </div>
         </div>
@@ -69,8 +68,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon autodidactic"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'autodidactic right':data[query].autodidacticFramed<=5, 'framed left':data[query].autodidacticFramed>5}" 
-                    data-ng-style="data[query].autodidacticFramed>5 && {'width':data[query].autodidacticFramed*10+'%'} || data[query].autodidacticFramed<=5 &&{'width':(10-data[query].autodidacticFramed)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'autodidactic right':data[Data.query].autodidacticFramed<=5, 'framed left':data[Data.query].autodidacticFramed>5}" 
+                    data-ng-style="data[Data.query].autodidacticFramed>5 && {'width':data[Data.query].autodidacticFramed*10+'%'} || data[Data.query].autodidacticFramed<=5 &&{'width':(10-data[Data.query].autodidacticFramed)*10+'%'}"></div>
                 <div class="left icon framed"></div>
             </div>
         </div>
@@ -82,8 +81,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon games"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'games right':data[query].gamesSerious<=5, 'serious left':data[query].gamesSerious>5}" 
-                    data-ng-style="data[query].gamesSerious>5 && {'width':data[query].gamesSerious*10+'%'} || data[query].gamesSerious<=5 &&{'width':(10-data[query].gamesSerious)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'games right':data[Data.query].gamesSerious<=5, 'serious left':data[Data.query].gamesSerious>5}" 
+                    data-ng-style="data[Data.query].gamesSerious>5 && {'width':data[Data.query].gamesSerious*10+'%'} || data[Data.query].gamesSerious<=5 &&{'width':(10-data[Data.query].gamesSerious)*10+'%'}"></div>
                 <div class="left icon serious"></div>
             </div>
         </div>
@@ -95,8 +94,8 @@
             </div>
             <div class="results-input">
                 <div class="right icon subject"></div>
-                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'subject right':data[query].subjectInterdisciplinary<=5, 'interdisciplinary left':data[query].subjectInterdisciplinary>5}" 
-                    data-ng-style="data[query].subjectInterdisciplinary>5 && {'width':data[query].subjectInterdisciplinary*10+'%'} || data[query].subjectInterdisciplinary<=5 &&{'width':(10-data[query].subjectInterdisciplinary)*10+'%'}"></div>
+                <div data-ng-class="{'results-input-fill':true, 'icon':true, 'subject right':data[Data.query].subjectInterdisciplinary<=5, 'interdisciplinary left':data[Data.query].subjectInterdisciplinary>5}" 
+                    data-ng-style="data[Data.query].subjectInterdisciplinary>5 && {'width':data[Data.query].subjectInterdisciplinary*10+'%'} || data[Data.query].subjectInterdisciplinary<=5 &&{'width':(10-data[Data.query].subjectInterdisciplinary)*10+'%'}"></div>
                 <div class="left icon interdisciplinary"></div>
             </div>
         </div>

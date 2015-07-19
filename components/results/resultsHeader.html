@@ -4,6 +4,16 @@
     <div id="results-btn-wrapper">
         <button id="share-btn" class="results-btn"  data-ng-click="share()">שתף בפייסבוק</button>
         <button id="back-to-edit-btn"  class="results-btn" data-ng-click="back()">חזור לעריכה</button>
+		<select id="query-btn" class="results-btn" data-ng-model="Data.query" ng-style="Data.query == 'me' && {'text-indent': '24%'}">
+			<option value="me" selected>הפרופיל האישי שלי</option>
+			<option value="male">גברים</option>
+			<option value="female">נשים</option>
+			<option value="עד 18">עד 18</option>
+			<option value="19-25">19-25</option>
+			<option value="26-35">26-35</option>
+			<option value="36-45">36-45</option>
+			<option value="46 ומעלה">46 ומעלה</option>
+		</select>
     </div>
 </div>
      

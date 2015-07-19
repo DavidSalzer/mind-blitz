@@ -320,13 +320,14 @@ input[type=range]::-ms-thumb {
     padding-top: 5px;
 }
 
-#results select {
-    color: #ebbf5e;
+#results-header select {
+	background-image: url('../img/arrow_2.jpg');
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    padding-top: 1px;
 	text-indent: 45%;
+}
+
+#results-header select option{
+	color: black;
 }
 
 #results-header .image-container {
@@ -372,10 +373,15 @@ input[type=range]::-ms-thumb {
     line-height: 23px;
 }
 
-#share-btn {
-    margin-left: 10px;
-    text-indent: 13px;
+#share-btn, #back-to-edit-btn, #query-btn {
+    width: 30%;
 }
+
+#query-btn {
+    margin-right: 10px;
+}
+
+
 
 .results-wrapper {
     position: relative;
