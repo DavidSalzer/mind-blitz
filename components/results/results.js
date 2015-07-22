@@ -4,6 +4,7 @@ mindBlitzApp.controller('results', ['$scope', 'resultsData', '$state', '$http','
 	$scope.data=[];
     $scope.getData.then(function (data) {
         $scope.data["me"] = data;
+        $scope.data["me0"] = data;
 		console.log(data);
 		if (data.startAns==false)
 			$state.go("signup");

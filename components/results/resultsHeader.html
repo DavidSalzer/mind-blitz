@@ -4,7 +4,8 @@
     <div id="results-btn-wrapper">
         <button id="share-btn" class="results-btn"  data-ng-click="share()">שתף בפייסבוק</button>
         <button id="back-to-edit-btn"  class="results-btn" data-ng-click="back()">חזור לעריכה</button>
-		<select id="query-btn" class="results-btn" data-ng-model="Data.query" ng-style="Data.query == 'me' && {'text-indent': '24%'}">
+		<select id="query-btn" class="results-btn" data-ng-model="Data.query" ng-style="(Data.query == 'me' && {'text-indent': '24%'}) || (Data.query == 'me0' && {'text-indent': '32%'})">
+			<option value="me0" selected>פרופיל ממוצע</option>
 			<option value="me" selected>הפרופיל האישי שלי</option>
 			<option value="male">גברים</option>
 			<option value="female">נשים</option>

@@ -1,7 +1,7 @@
 var mindBlitzApp = angular.module('mindBlitzApp', ['ui.router']);
 
 mindBlitzApp.factory('Data', function () {
-    return { query: 'me' };
+    return { query: 'me0' };
 });
 
 mindBlitzApp.config(function ($stateProvider, $urlRouterProvider) {
