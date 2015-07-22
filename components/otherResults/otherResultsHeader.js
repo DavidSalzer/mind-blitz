@@ -5,8 +5,10 @@ mindBlitzApp.controller('otherResultsHeader', ['$stateParams','$scope','$state',
 			.then(function (data) {
 				facebook.share({
 					name: 'mind blitz.',
-					link: 'http://mindblitz.mindcet.org/#/results/'+$stateParams.key,
-					picture: 'http://mindblitz.mindcet.org/img/logo_small.png',
+					//link: 'http://mindblitz.mindcet.org/#/results/'+$stateParams.key,
+					//picture: 'http://mindblitz.mindcet.org/img/logo_small.png',
+					link: 'http://mindblitz.mindcet.org/share.php?key='+$stateParams.key,
+					picture: 'http://mindblitz.mindcet.org/shareimage/'+$stateParams.key+'.png?v='+Date.now(),
 					caption:"",
 					caption:"",
 					description: '',

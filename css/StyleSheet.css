@@ -373,7 +373,7 @@ input[type=range]::-ms-thumb {
     line-height: 23px;
 }
 
-#share-btn, #back-to-edit-btn, #query-btn {
+.results-btn-3 {
     width: 30%;
 }
 
