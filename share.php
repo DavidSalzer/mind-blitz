@@ -20,7 +20,7 @@ $img_URL = $SITE_ROOT."shareimage/".$_GET["key"].".png";
         <p>I've been mind blitzed</p>
         <img src="<?php echo $img_URL; ?>">
 		<script type="text/javascript">
-			window.location = "<?php echo $page_link; ?>"
+			window.location = "/"
 		</script>
     </body>
 </html>
